@@ -4,7 +4,7 @@
   "scripts": {
     "watch": "watchify -d -t babelify src/app.es6 -o dist/build.js",
     "serve": "browser-sync start --server --files dist/build.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha --compilers js:babel-register -R spec -c test/**/*.test.es6",
     "build": "browserify -t babelify src/app.es6 -o dist/build.js"
   },
   "license": "MIT",
@@ -12,9 +12,12 @@
   "devDependencies": {
     "babel-core": "^6.4.5",
     "babel-preset-es2015": "^6.3.13",
+    "babel-register": "^6.4.3",
     "babelify": "^7.2.0",
     "browser-sync": "^2.11.1",
     "browserify": "^13.0.0",
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5",
     "watchify": "^3.7.0"
   }
 }

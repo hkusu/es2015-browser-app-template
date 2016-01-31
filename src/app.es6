@@ -1,3 +1,5 @@
-import Hoge from './hoge.es6';
+import Person from './person.es6';
 
-const hoge = new Hoge();
+const person = new Person('Yamada');
+
+person.hello();
