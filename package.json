@@ -4,6 +4,7 @@
   "scripts": {
     "watch": "watchify -d -t babelify src/app.es6 -o dist/build.js",
     "serve": "browser-sync start --server --files dist/build.js",
+    "lint": "eslint src/*; exit 0",
     "test": "mocha --compilers js:babel-register -R spec -c test/**/*.test.es6",
     "build": "browserify -t babelify src/app.es6 -o dist/build.js"
   },
@@ -18,6 +19,7 @@
     "browserify": "^13.0.0",
     "chai": "^3.5.0",
     "chai-as-promised": "^5.2.0",
+    "eslint": "^1.10.3",
     "mocha": "^2.4.5",
     "sinon": "^1.17.3",
     "sinon-as-promised": "^4.0.0",
