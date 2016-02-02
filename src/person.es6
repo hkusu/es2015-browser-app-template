@@ -21,8 +21,16 @@ class Person {
   /**
    * @returns {void}
    */
-  hello() {
+  helloName() {
     console.log(`hello, ${this.name}`);
+  }
+
+  /**
+   * @param {MyObj} myObj
+   * @returns {void}
+   */
+  static helloObj(myObj) {
+    console.log(myObj);
   }
 
 }
