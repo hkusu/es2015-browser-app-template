@@ -1,4 +1,4 @@
-import chai from 'chai';
+import {chai} from './libsLoader.es6';
 import Person from '../src/person.es6';
 
 const expect = chai.expect;
