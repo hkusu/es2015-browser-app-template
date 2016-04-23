@@ -2,12 +2,12 @@
   "name": "es2015-app",
   "version": "0.0.1",
   "scripts": {
-    "watch": "watchify -d -v -t babelify ./src/app.es6 -o ./dist/build.js",
-    "serve": "browser-sync start --server --files ./dist/build.js",
+    "watch": "watchify -d -v -t babelify ./src/app.es6 -o ./build/build.js",
+    "serve": "browser-sync start --server --files ./build/build.js",
     "lint": "eslint ./src/*; exit 0",
     "doc": "esdoc -c ./esdoc.json",
     "test": "mocha --compilers js:babel-register -R spec -c ./test/**/*.test.es6",
-    "build": "browserify -t babelify ./src/app.es6 -o ./dist/build.js"
+    "build": "browserify -t babelify ./src/app.es6 -o ./build/build.js"
   },
   "license": "MIT",
   "dependencies": {},
